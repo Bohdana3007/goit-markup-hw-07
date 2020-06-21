@@ -1,0 +1,102 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.main-nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  color: #212121;
+  font-family: Raleway, sans-serif;
+  font-style: 700px;
+  font-size: 26px;
+  line-height: 1.19em;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  transition: background-color 250ms $cubic, color 250ms $cubic;
+  &:hover,
+  &:focus {
+    color: #212121;
+  }
+  &-accent {
+    color: $accent-color;
+  }
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 85px;
+  & .item + .item {
+    margin-left: 50px;
+  }
+}
+.site-nav .link {
+  display: block;
+  padding: 32px 0;
+  font-weight: 500px;
+  color: $primary-text-color;
+  font-weight: 500px;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.02em;
+  font-family: Roboto;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+.current {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: space-around;
+  & .item + .item {
+    margin-left: 30px;
+  }
+}
+
+.adress-icon {
+  fill: currentColor;
+  margin-right: 10px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+.auth-nav .link {
+  padding-bottom: 32px;
+  color: #757575;
+  font-weight: 500px;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.02em;
+  font-family: Roboto;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
